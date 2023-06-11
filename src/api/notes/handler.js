@@ -1,13 +1,13 @@
-/* eslint-disable no-undef */
-/* eslint-disable space-before-function-paren */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable lines-between-class-members */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unused-vars */
-/* eslint-disable eol-last */
+/* by muchit abdulmukhit11@gmail.com*/
 class NotesHandler {
   constructor(service) {
     this._service = service;
+
+    this.postNoteHandler = this.postNoteHandler.bind(this);
+    this.getNotesHandler = this.getNotesHandler.bind(this);
+    this.getNoteByIdHandler = this.getNoteByIdHandler.bind(this);
+    this.putNoteByIdHandler = this.putNoteByIdHandler.bind(this);
+    this.deleteNoteByIdHandler = this.deleteNoteByIdHandler.bind(this);
   }
  
   postNoteHandler(request, h) {
